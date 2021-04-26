@@ -38,6 +38,9 @@ public class App {
             Person yacou = new Person().setName("Kone").setSurname("Yacouba").setAge(31).setAddress(
                     new Address().setNum_rue(1).setRue("Charles Geniaux").setCode_postale("35000").setVille("Paris"));
 
+            Person yaya = new Person().setName("Kone").setSurname("Yaya").setAge(27).setAddress(
+                    new Address().setNum_rue(1).setRue("Charles Geniaux").setCode_postale("35000").setVille("Paris"));
+
             Compte compte = new Compte();
             compte.deposerArgent(200);
             compte.retirerArgent(50);
@@ -45,6 +48,7 @@ public class App {
 
             persons.insertOne(drissa);
             persons.insertOne(yacou);
+            persons.insertOne(yaya);
 
 
             List<Person> people = persons.find().into(new ArrayList<>());
